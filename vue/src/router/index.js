@@ -30,7 +30,7 @@ const routes = [
       { path: 'help', name: 'Help', meta: { name: '求购信息' }, component: () => import('../views/manager/Help') },
       { path: 'address', name: 'Address', meta: { name: '收货地址' }, component: () => import('../views/manager/Address') },
       { path: 'feedback', name: 'Feedback', meta: { name: '反馈信息' }, component: () => import('../views/manager/Feedback') },
-      { path: 'comment', name: 'Comment', meta: { name: '评论信息' }, component: () => import('../views/manager/Comment') },
+      // { path: 'comment', name: 'Comment', meta: { name: '评论信息' }, component: () => import('../views/manager/Comment') },
     ]
   },
   {

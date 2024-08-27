@@ -12,9 +12,9 @@
         <div @click="$router.push(item.path)" class="menu" v-for="item in menus" :key="item.path"
              :class="{'menu-active' : item.path === $route.path }">{{ item.text }}</div>
       </div>
-      <div>
-        <span @click="$router.push('/front/chat')" style="font-size: 16px; color: white; cursor: pointer"><i class="el-icon-chat-dot-round"></i> 聊天消息</span>
-      </div>
+<!--      <div>-->
+<!--        <span @click="$router.push('/front/chat')" style="font-size: 16px; color: white; cursor: pointer"><i class="el-icon-chat-dot-round"></i> 聊天消息</span>-->
+<!--      </div>-->
       <div class="front-header-right">
         <div v-if="!user.username">
           <el-button @click="$router.push('/login')">登录</el-button>
@@ -35,15 +35,15 @@
               <el-dropdown-item>
                 <div @click="$router.push('/front/goods')">我的商品</div>
               </el-dropdown-item>
-              <el-dropdown-item>
-                <div @click="$router.push('/front/userPosts')">我的发帖</div>
-              </el-dropdown-item>
+<!--              <el-dropdown-item>-->
+<!--                <div @click="$router.push('/front/userPosts')">我的发帖</div>-->
+<!--              </el-dropdown-item>-->
               <el-dropdown-item>
                 <div @click="$router.push('/front/userHelp')">我的求购</div>
               </el-dropdown-item>
-              <el-dropdown-item>
-                <div @click="$router.push('/front/userFeedback')">我的反馈</div>
-              </el-dropdown-item>
+<!--              <el-dropdown-item>-->
+<!--                <div @click="$router.push('/front/userFeedback')">我的反馈</div>-->
+<!--              </el-dropdown-item>-->
               <el-dropdown-item>
                 <div @click="$router.push('/front/address')">我的地址</div>
               </el-dropdown-item>
@@ -87,7 +87,7 @@ export default {
         { text: '社区广场', path: '/front/posts' },
         { text: '求购专区', path: '/front/help' },
         { text: '系统公告', path: '/front/notice' },
-        { text: '留言反馈', path: '/front/feedback' },
+        // { text: '留言反馈', path: '/front/feedback' },
       ]
     }
   },

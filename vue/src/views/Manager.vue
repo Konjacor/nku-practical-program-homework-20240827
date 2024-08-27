@@ -44,13 +44,13 @@
             </template>
             <el-menu-item index="/category">分类信息</el-menu-item>
             <el-menu-item index="/goods">商品信息</el-menu-item>
-            <el-menu-item index="/circles">圈子信息</el-menu-item>
+<!--            <el-menu-item index="/circles">圈子信息</el-menu-item>-->
             <el-menu-item index="/posts">社区帖子</el-menu-item>
             <el-menu-item index="/help">求购信息</el-menu-item>
-            <el-menu-item index="/address">收货地址</el-menu-item>
-            <el-menu-item index="/feedback">用户反馈</el-menu-item>
+<!--            <el-menu-item index="/address">收货地址</el-menu-item>-->
+<!--            <el-menu-item index="/feedback">用户反馈</el-menu-item>-->
             <el-menu-item index="/notice">公告信息</el-menu-item>
-            <el-menu-item index="/comment">评论信息</el-menu-item>
+<!--            <el-menu-item index="/comment">评论信息</el-menu-item>-->
           </el-submenu>
 
           <el-submenu index="user">
