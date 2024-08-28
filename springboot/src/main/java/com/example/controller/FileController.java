@@ -6,6 +6,9 @@ import cn.hutool.core.lang.Dict;
 import cn.hutool.core.thread.ThreadUtil;
 import cn.hutool.core.util.StrUtil;
 import com.example.common.Result;
+import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiImplicitParam;
+import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
@@ -18,6 +21,7 @@ import java.util.List;
 /**
  * 文件接口
  */
+@Api(tags = "文件操作接口")
 @RestController
 @RequestMapping("/files")
 public class FileController {
@@ -35,6 +39,8 @@ public class FileController {
      * 文件上传
      */
     @PostMapping("/upload")
+    @ApiImplicitParam(name = "file",value="文件上传",required = true)
+    @ApiOperation(value = "文件上传")
     public Result upload(MultipartFile file) {
         String flag;
         synchronized (FileController.class) {
@@ -61,6 +67,8 @@ public class FileController {
      * 富文本文件上传
      */
     @PostMapping("/editor/upload")
+    @ApiImplicitParam(name = "file",value="富文本文件上传",required = true)
+    @ApiOperation(value = "富文本文件上传")
     public Dict editorUpload(MultipartFile file) {
         String flag;
         synchronized (FileController.class) {
@@ -91,6 +99,8 @@ public class FileController {
      * @param response
      */
     @GetMapping("/{flag}")   //  1697438073596-avatar.png
+    @ApiImplicitParam(name = "flag",value="文件获取",required = true)
+    @ApiOperation(value = "文件获取")
     public void avatarPath(@PathVariable String flag, HttpServletResponse response) {
         OutputStream os;
         try {
@@ -114,6 +124,8 @@ public class FileController {
      * @param flag
      */
     @DeleteMapping("/{flag}")
+    @ApiImplicitParam(name = "flag",value="文件删除",required = true)
+    @ApiOperation(value = "文件删除")
     public void delFile(@PathVariable String flag) {
         FileUtil.del(filePath + flag);
         System.out.println("删除文件" + flag + "成功");

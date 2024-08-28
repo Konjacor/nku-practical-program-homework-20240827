@@ -6,9 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="0ab6c47d-54aa-4f9a-82fc-8f48b697bea3" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/springboot/src/main/java/com/example/controller/HelpController.java" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/src/main/java/com/example/controller/HelpController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/springboot/target/classes/com/example/controller/GoodsController.class" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/target/classes/com/example/controller/GoodsController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/springboot/target/classes/com/example/controller/LikesController.class" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/target/classes/com/example/controller/LikesController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/src/main/java/com/example/controller/FileController.java" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/src/main/java/com/example/controller/FileController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/src/main/resources/application.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -71,7 +70,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1724848991472</updated>
-      <workItem from="1724848993281" duration="4327000" />
+      <workItem from="1724848993281" duration="4950000" />
     </task>
     <servers />
   </component>
