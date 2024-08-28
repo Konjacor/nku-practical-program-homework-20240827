@@ -39,7 +39,7 @@ public class ChatGroupController {
      */
     @DeleteMapping("/delete/{id}")
     @ApiImplicitParam(name = "id",value = "聊天组id",required = true)
-    @ApiOperation(value = "删除聊天组")
+    @ApiOperation(value = "根据id删除聊天组")
     public Result deleteById(@PathVariable Integer id) {
         chatGroupService.deleteById(id);
         return Result.success();
@@ -50,7 +50,7 @@ public class ChatGroupController {
      */
     @DeleteMapping("/delete/batch")
     @ApiImplicitParam(name = "ids",value = "多个聊天组id",required = true)
-    @ApiOperation(value = "批量删除聊天组")
+    @ApiOperation(value = "根据id批量删除聊天组")
     public Result deleteBatch(@RequestBody List<Integer> ids) {
         chatGroupService.deleteBatch(ids);
         return Result.success();
