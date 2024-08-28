@@ -10,6 +10,9 @@ import com.example.common.config.AliPayConfig;
 import com.example.common.enums.OrderStatusEnum;
 import com.example.entity.Orders;
 import com.example.service.OrdersService;
+import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiImplicitParam;
+import io.swagger.annotations.ApiOperation;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -23,6 +26,7 @@ import java.util.Map;
 
 //  https://natapp.cn/
 // ekihat7647@sandbox.com
+@Api(tags = "订单支付后端接口")
 @RestController
 @RequestMapping("/alipay")
 public class AliPayController {
@@ -41,6 +45,8 @@ public class AliPayController {
     private OrdersService ordersService;
 
     @GetMapping("/pay")  //  /alipay/pay?orderNo=xxx
+    @ApiImplicitParam(name = "orderNo", value = "用户是否成功支付订单", required = true)
+    @ApiOperation(value = "支付订单")
     public void pay(String orderNo, HttpServletResponse httpResponse) throws Exception {
         // 查询订单信息
         Orders orders = ordersService.selectByOrderNo(orderNo);
@@ -75,6 +81,7 @@ public class AliPayController {
     }
 
     @PostMapping("/notify")  // 注意这里必须是POST接口
+    @ApiOperation(value = "支付页面显示")
     public void payNotify(HttpServletRequest request) throws Exception {
         if (request.getParameter("trade_status").equals("TRADE_SUCCESS")) {
             System.out.println("=========支付宝异步回调========");
